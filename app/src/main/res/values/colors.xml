@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="selected">#13336E</color>
+    <color name="unselected">#ffffff</color>
+    <color name="recent_football">#666968</color>
+    <color name="cricket_list_title">#FFBB00</color>
+    <color name="team_color_text">#F1F3CE</color>
+    <color name="list_background_tint">#aa283655</color>
+    <color name="colorSeffron">#ff9933</color>
+    <color name="tabbarbgcolor">#dcdcdc</color>
+    <color name="tabbardefaultitemcolor">#808080</color>
+    <color name="com_facebook_likeview_text_color">#6a7180</color>
+</resources>
