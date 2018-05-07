@@ -15,4 +15,16 @@
     <color name="tabbarbgcolor">#dcdcdc</color>
     <color name="tabbardefaultitemcolor">#808080</color>
     <color name="com_facebook_likeview_text_color">#6a7180</color>
+    <color name="graycolor">#f5f6f9</color>
+    <color name="greencolor">#a3cfad</color>
+    <color name="yellow">#f8ab3e</color>
+    <color name="Nevyblue">#152E5D</color>
+    <color name="Blue">#0067d5</color>
+    <color name="finestSilver">#A5A5A5</color>
+    <color name="skycolor">#00bfff</color>
+    <color name="colorGrayLight">#9f9f9f</color>
+    <color name="transparent_white_hex_11">#11ffffff</color>
+    <color name="calendar_divider_color">#F3F3F3</color>
+    <color name="field_title_color">#58688a</color>
+    <color name="redcolor">#ff0000</color>
 </resources>

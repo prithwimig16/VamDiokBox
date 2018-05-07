@@ -31,9 +31,9 @@
             android:title="Sales" />
 
         <item
-            android:id="@+id/nav_account"
+            android:id="@+id/nav_user"
             android:icon="@drawable/ic_person_black_24dp"
-            android:title="Accountant" />
+            android:title="Users" />
 
         <item
             android:id="@+id/nav_logistics"
@@ -46,17 +46,6 @@
             android:title="Delivery" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Settings" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Feedback" />
-        </menu>
-    </item>
+
 
 </menu>

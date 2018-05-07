@@ -6,11 +6,17 @@
     tools:context="com.prithwiraj.vamdiokerp.fragments.CustomerFragment">
 
     <ListView
+        android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:dividerHeight="2dp">
+
+    </ListView>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floating_action_button_fab_with_listview"
+        android:id="@+id/bt_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -21,5 +27,23 @@
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"
         app:elevation="4dp" />
+
+    <TextView
+        android:text="There are no Customers on your list."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:id="@+id/EmptytextView_cs"
+        />
+    <TextView
+        android:text="Tap + to add an item."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/EmptytextView_cs"
+        android:id="@+id/EmptytextView_cs2" />
 
 </RelativeLayout>
