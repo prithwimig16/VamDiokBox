@@ -4,6 +4,8 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="copy_right_text">copyright @ 2018,VamDiokBox.</string>
+    <string name="all_right_reserved">All Right Reserved.</string>
 
     <string name="action_settings">Settings</string>
 
