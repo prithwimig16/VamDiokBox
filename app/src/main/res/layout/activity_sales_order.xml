@@ -85,16 +85,31 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:text="Customer"/>
 
-            <EditText
-                android:id="@+id/et_select_customer"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_marginTop="10dp"
-                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
-                android:hint="Select Customer"
-                android:textAllCaps="false"
-                />
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/et_select_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select Customer"
+                    android:layout_toLeftOf="@+id/bt_add_customer"
+                    android:textAllCaps="false" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Imgbt_add_customer"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/colorPrimaryDark"
+                    android:src="@drawable/add_icon" />
+
+            </RelativeLayout>
+
+
 
 
             <TextView
@@ -141,7 +156,7 @@
                 android:textSize="15dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Delivery Method#"/>
+                android:text="Delivery Method"/>
 
 
             <EditText
@@ -284,7 +299,7 @@
                 android:text="Add Line Items"
                 android:background="@color/colorPrimaryDark"
                 android:textColor="@color/white"
-                android:drawableLeft="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawableLeft="@drawable/add_icon"
                 android:drawablePadding="2dip"
                 android:paddingLeft="30dip"
                 android:paddingRight="26dip"
