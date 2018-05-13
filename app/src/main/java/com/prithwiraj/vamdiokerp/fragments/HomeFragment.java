@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Home");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(ErpCurrentUser.getSharedInstance().getCompany());
     }
 
 
@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
         this.tvWelcome=(TextView)v.findViewById(R.id.tvWelcome);
     }
     private void updateUi(){
-        this.tvWelcome.setText("Welcome !"); //+ ErpCurrentUser.getSharedInstance().name+" !"
+        this.tvWelcome.setText("Welcome "+ ErpCurrentUser.getSharedInstance().getFirstName()+" !"); //+ ErpCurrentUser.getSharedInstance().name+" !"
     }
 
 }

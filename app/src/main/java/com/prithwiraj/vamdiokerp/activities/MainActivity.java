@@ -9,9 +9,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.prithwiraj.vamdiokerp.R;
 import com.prithwiraj.vamdiokerp.fragments.SubItemFragment;
+import com.prithwiraj.vamdiokerp.model.ErpCurrentUser;
 import com.prithwiraj.vamdiokerp.model.NavMenuModel;
 import com.prithwiraj.vamdiokerp.navigationdrawer.NavMenuAdapter;
 import com.prithwiraj.vamdiokerp.navigationdrawer.SubTitle;
@@ -37,9 +39,22 @@ public class MainActivity extends AppCompatActivity implements NavMenuAdapter.Me
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
+        TextView tv=(TextView)findViewById(R.id.navigation_header_text);
+        TextView tvEmail=(TextView)findViewById(R.id.textView);
+
+        //set Navigation drawer Title and Email..START
+
+        tv.setText(ErpCurrentUser.getSharedInstance().getFirstName());
+        tvEmail.setText(ErpCurrentUser.getSharedInstance().getEmail());
+
+        //set Navigation drawer Title and Email..END
+
         toggle.syncState();
 
         setNavigationDrawerMenu();
+
+//        View headerView = .inflateHeaderView(R.layout.navigation_header);
+//        headerView.findViewById(R.id.navigation_header_text);
     }
 
     private void setToolbar() {
