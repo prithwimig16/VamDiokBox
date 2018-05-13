@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.prithwiraj.vamdiokerp.activities.AddItemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/rel_main">
+
+        <TextView
+            android:id="@+id/tv_back_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Back"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Add Item"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_save_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Save"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_main"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_type"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:text="Type"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/redio_goods"
+                android:layout_below="@+id/tv_type"
+                android:layout_marginTop="10dp"
+                android:text="Goods"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/redio_service"
+                android:layout_below="@+id/tv_type"
+                android:layout_toRightOf="@+id/redio_goods"
+                android:layout_marginTop="10dp"
+                android:text="Services"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_item_name"
+                android:layout_below="@+id/redio_goods"
+                android:layout_marginTop="10dp"
+                android:text="Item Name"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_item_name"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_item_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_item_unit"
+                android:layout_below="@+id/et_item_name"
+                android:layout_marginTop="10dp"
+                android:text="Unit"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_item_unit"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_item_unit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_item_rate"
+                android:layout_below="@+id/et_item_unit"
+                android:layout_marginTop="10dp"
+                android:text="Rate"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_item_rate"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_item_rate"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_item_account"
+                android:layout_below="@+id/et_item_rate"
+                android:layout_marginTop="10dp"
+                android:text="Account"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_item_account"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_item_account"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_item_description"
+                android:layout_below="@+id/et_item_account"
+                android:layout_marginTop="10dp"
+                android:text="Description"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_item_description"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_item_description"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_purchase_rate"
+                android:layout_below="@+id/et_item_description"
+                android:layout_marginTop="10dp"
+                android:text="Purchase Rate"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/et_purchase_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_purchase_rate"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_purchase_account"
+                android:layout_below="@+id/et_item_rate"
+                android:layout_marginTop="10dp"
+                android:text="Account"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_purchase_account"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_purchase_account"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_purchase_description"
+                android:layout_below="@+id/et_purchase_account"
+                android:layout_marginTop="10dp"
+                android:text="Description"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_purchase_description"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_purchase_description"/>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

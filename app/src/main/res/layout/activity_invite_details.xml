@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/d_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/graycolor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/graycolor">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/b_cancel"
+                    android:layout_alignBottom="@+id/b_cancel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="Edit Profile"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_cancel"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/cancel_button_160_normal"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/Blue" />
+
+                <Button
+                    android:id="@+id/b_save_invite"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@drawable/save_button_160_normal"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+        <View android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/toolbar_dropshadow"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/d_toolbar"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rel_child1"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=" User Name*"
+                    android:textColor="@color/field_title_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/e_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_user_name"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rel_child2"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rel_child1">
+
+                <TextView
+                    android:id="@+id/tv_email_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Email Address*"
+                    android:textColor="@color/field_title_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/e_email_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_email_address"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rel_child3"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rel_child2">
+
+                <TextView
+                    android:id="@+id/tv_access_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Access Role*"
+                    android:textColor="@color/field_title_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_access_role"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_access_role"
+                    android:background="@color/calendar_divider_color"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Tap here to select"
+                    android:textAllCaps="false"
+                    android:textColor="@color/skycolor" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rel_child4"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rel_child3">
+
+                <TextView
+                    android:id="@+id/tv_access_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Access Status"
+                    android:textColor="@color/field_title_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/b_access_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_access_status"
+                    android:background="@color/calendar_divider_color"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Tap here to select"
+                    android:textAllCaps="false"
+                    android:textColor="@color/skycolor" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

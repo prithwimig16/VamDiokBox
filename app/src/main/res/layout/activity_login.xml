@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="VamdiokBOX"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView3"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editTextLoginUSerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="#999999"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/editTextLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@id/editTextLoginUSerName"
+            android:hint="Passwrod"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="#999999"
+            android:textSize="15dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:layout_marginTop="10dp"
+            android:id="@+id/bt_signin"
+            android:gravity="center"
+            android:background="@color/graycolor"
+            android:layout_below="@+id/editTextLoginPassword"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_fprgot_password"
+            android:layout_below="@+id/bt_signin"
+            android:layout_marginTop="10dp"
+            android:text="Forgot Password?"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_google_signin"
+            android:layout_below="@+id/tv_fprgot_password"
+            android:layout_marginTop="10dp"
+            android:text="Sign in with Google or other IDPs"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_signup"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignLeft="@+id/editTextLoginUSerName"
+            android:layout_alignStart="@+id/editTextLoginUSerName"
+            android:layout_alignRight="@+id/editTextLoginUSerName"
+            android:layout_alignEnd="@+id/editTextLoginUSerName"
+            android:layout_below="@+id/tv_google_signin"/>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

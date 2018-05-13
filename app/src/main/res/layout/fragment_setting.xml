@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_most_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/graycolor"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <View android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/toolbar_dropshadow"/>
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/graycolor"
+            android:overScrollMode="always"
+            android:padding="3dp">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_my_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="MY PROFILE"
+            android:textSize="15dp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="11dp"
+            android:background="@color/white"
+            android:id="@+id/rl_myprofile"
+            android:layout_below="@+id/tv_my_profile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:id="@+id/tv_name_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/profilepic"
+                android:layout_toRightOf="@+id/profilepic"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/b_next"
+                style="@android:style/Widget.DeviceDefault.Light.Button.Borderless.Small"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/ic_navigate_next_black_24dp"
+                android:textColor="@color/graycolor" />
+
+            <ImageView
+                android:id="@+id/profilepic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:background="@color/finestSilver"
+                android:scaleType="fitCenter"
+                android:src="@drawable/avtar" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_company_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_myprofile"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="COMPANY PROFILE"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_company_profile"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_company_profile"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/tv_companyname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/img_companypic"
+                android:layout_toRightOf="@+id/img_companypic"
+                android:text="Company Name"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_companypic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:src="@drawable/avtar"
+                android:background="@color/finestSilver"
+                android:scaleType="fitCenter" />
+
+
+            <Button
+                android:id="@+id/b_next1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/ic_navigate_next_black_24dp" />
+
+            <View
+                android:id="@+id/view7"
+                style="@style/Divider"
+                android:layout_below="@+id/img_companypic"
+                android:layout_marginTop="40dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_company_profile"
+            android:layout_alignStart="@+id/tv_company_profile"
+            android:layout_below="@+id/rl_company_profile"
+            android:layout_marginTop="20dp"
+            android:text="MY TEAM"
+            android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_team"
+                android:layout_alignStart="@+id/tv_team"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_marginTop="17dp"
+                android:text="MORE"
+                android:textSize="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_team"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/tv_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="15dp"
+                android:text="Invite and Manage Users"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/b_next2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/ic_navigate_next_black_24dp" />
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/relativeLayout4"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_below="@+id/tv_more"
+                >
+
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Share the App"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+
+                <Button
+                    android:id="@+id/b_next3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_above="@+id/view3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <View style="@style/Divider"
+                    android:id="@+id/view3"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_share"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/relativeLayout5"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_below="@+id/relativeLayout4"
+                >
+
+                <TextView
+                    android:id="@+id/tv_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="15dp"
+                    android:text="Terms and Conditions"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/b_next4"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_above="@+id/view4"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <View style="@style/Divider"
+                    android:id="@+id/view4"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_terms"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/relativeLayout6"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_below="@+id/relativeLayout5">
+
+                <TextView
+                    android:id="@+id/tv_privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="15dp"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/b_next5"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_above="@+id/view5"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <View style="@style/Divider"
+                    android:id="@+id/view5"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_privacy"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/relativeLayout9"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_below="@+id/relativeLayout6"
+                >
+
+                <TextView
+                    android:id="@+id/tv_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:text="Feedback"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <View style="@style/Divider"
+                    android:id="@+id/view9"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_feedback"/>
+
+                <Button
+                    android:id="@+id/b_next6"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_above="@+id/view9"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/relativeLayout10"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_below="@+id/relativeLayout9"
+                >
+
+                <TextView
+                    android:id="@+id/tv_rateus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Rate US"
+                    android:textSize="18dp" />
+
+                <View style="@style/Divider"
+                    android:id="@+id/view10"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_rateus"/>
+                <Button
+                    android:id="@+id/b_next7"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_above="@+id/view10"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/relativeLayout10"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_contactus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:gravity="center"
+                    android:text="Contact US"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/b_next8"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/ic_navigate_next_black_24dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_below="@+id/relativeLayout11"
+                android:layout_marginTop="11dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Logout"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/relativeLayout8"
+            android:layout_marginBottom="100dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="VamdiokERP V1.0.13"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+
+            <View style="@style/Divider"
+                android:id="@+id/view6"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_version"
+                />
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

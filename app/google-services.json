@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "221268213214",
+    "firebase_url": "https://vamdiokerp.firebaseio.com",
+    "project_id": "vamdiokerp",
+    "storage_bucket": "vamdiokerp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221268213214:android:bbfa6d4305e1990f",
+        "android_client_info": {
+          "package_name": "com.prithwiraj.vamdiokerp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221268213214-i6qpdeg1ik95m0aqoj0c0u7ampgakiel.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prithwiraj.vamdiokerp",
+            "certificate_hash": "72d2bbd87fb8f3fbfc600448a48500feace5692e"
+          }
+        },
+        {
+          "client_id": "221268213214-4d1o7qfovpnkgcec74q08lge342ssnvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByvvf32DU5DOxLdfmiCSjUVtJ67AprCRw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221268213214-4d1o7qfovpnkgcec74q08lge342ssnvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

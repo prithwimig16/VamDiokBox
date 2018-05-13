@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.prithwiraj.vamdiokerp.fragments.CustomerFragment">
+
+<!--<Spinner-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:id="@+id/status_spinner"-->
+    <!--android:layout_marginBottom="7dp"-->
+    <!--android:drawSelectorOnTop="true"-->
+    <!--android:spinnerMode="dropdown"-->
+    <!--android:layout_centerHorizontal="true">-->
+
+<!--</Spinner>-->
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:dividerHeight="2dp">
+
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bt_fab_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:elevation="4dp" />
+
+    <TextView
+        android:text="There are no Items on your list."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:id="@+id/EmptytextView_item"
+        />
+    <TextView
+        android:text="Tap + to add an item."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+       android:layout_below="@+id/EmptytextView_item"
+        android:id="@+id/EmptytextView_item2" />
+
+
+</RelativeLayout>

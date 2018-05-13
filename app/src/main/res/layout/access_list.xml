@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/graycolor"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/d_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/graycolor"
+        android:minHeight="?attr/actionBarSize">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Select"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/b_cancel"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/b_cancel"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:background="@drawable/cancel_button_160_normal"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/skycolor"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/graycolor"
+        android:padding="10dp"
+        android:layout_below="@id/d_toolbar"
+        android:id="@+id/searchlayout"
+        >
+
+        <SearchView
+            android:id="@+id/select_etsearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:focusableInTouchMode="false"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Here">
+
+
+        </SearchView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:id="@+id/select_itemList"
+        android:background="@color/white"
+        android:layout_below="@+id/searchlayout"
+        android:layout_marginTop="10dp">
+    </ListView>
+
+    </LinearLayout>
+
+</RelativeLayout>
