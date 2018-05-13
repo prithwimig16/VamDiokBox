@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VamdiokERP.iml" filepath="$PROJECT_DIR$/VamdiokERP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VamDiokBox.iml" filepath="$PROJECT_DIR$/VamDiokBox.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.prithwiraj.vamdiokerp.R;
 import com.prithwiraj.vamdiokerp.activities.AddItemActivity;
+import com.prithwiraj.vamdiokerp.activities.SalesOrderActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -98,8 +99,15 @@ public class SubItemFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt_fab_sub_item:
+
+                if(strScreenName.equalsIgnoreCase("sales orders")){
+                    Intent i=new Intent(getActivity(), SalesOrderActivity.class);
+                    startActivity(i);
+                }
+                else{
                 Intent i=new Intent(getActivity(), AddItemActivity.class);
                 startActivity(i);
+                }
                 break;
 
         }
