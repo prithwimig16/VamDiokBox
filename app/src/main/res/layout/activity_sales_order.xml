@@ -67,6 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
+
         android:background="@color/graycolor"
         android:padding="20dp">
 
@@ -74,7 +75,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/linear1"
-            android:background="@color/white"
+            android:elevation="4dp"
+            android:background="@drawable/myrect"
             android:padding="10dp"
             android:orientation="vertical">
 
@@ -96,7 +98,6 @@
                     android:gravity="left"
                     android:layout_marginTop="10dp"
                     android:hint="Select Customer"
-                    android:layout_toLeftOf="@+id/bt_add_customer"
                     android:textAllCaps="false" />
 
                 <ImageButton
@@ -174,9 +175,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/linear2"
+            android:elevation="4dp"
+            android:background="@drawable/myrect"
             android:layout_below="@+id/linear1"
             android:layout_marginTop="15dp"
-            android:background="@color/white"
             android:padding="10dp"
             android:weightSum="2"
             android:orientation="horizontal">
@@ -243,7 +245,8 @@
             android:id="@+id/linear3"
             android:layout_below="@+id/linear2"
             android:layout_marginTop="15dp"
-            android:background="@color/white"
+            android:elevation="4dp"
+            android:background="@drawable/myrect"
             android:padding="10dp"
             android:orientation="vertical">
 
@@ -279,7 +282,8 @@
             android:id="@+id/linear4"
             android:layout_below="@+id/linear3"
             android:layout_marginTop="15dp"
-            android:background="@color/white"
+            android:elevation="4dp"
+            android:background="@drawable/myrect"
             android:padding="10dp"
             android:orientation="vertical">
 
@@ -313,7 +317,8 @@
             android:id="@+id/linear5"
             android:layout_below="@+id/linear4"
             android:layout_marginTop="15dp"
-            android:background="@color/white"
+            android:elevation="4dp"
+            android:background="@drawable/myrect"
             android:padding="10dp"
             android:orientation="vertical">
 
