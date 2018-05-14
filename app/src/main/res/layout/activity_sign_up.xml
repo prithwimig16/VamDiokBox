@@ -54,6 +54,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:hint="Email Address"
         android:inputType="textEmailAddress" />
 </android.support.design.widget.TextInputLayout>
@@ -69,6 +70,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:hint="Password"
         android:inputType="textPassword" />
 </android.support.design.widget.TextInputLayout>
@@ -97,6 +99,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Your Comapny Name"
             android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
@@ -135,14 +138,6 @@
     android:textSize="16sp"
     android:textColor="@color/colorPrimary"/>
 
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="20dp"
-        android:visibility="gone" />
 
     </LinearLayout>
     </ScrollView>

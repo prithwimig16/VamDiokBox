@@ -6,57 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".activities.SalesOrderActivity">
 
-<android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    android:minHeight="?attr/actionBarSize"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimaryDark"
-    android:gravity="center_horizontal">
-
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:background="@color/colorPrimaryDark">
-
-        <TextView
-            android:id="@+id/tv_back_order"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
-            android:textSize="18dp"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
 
 
-        <TextView
-            android:id="@+id/tv_title_order"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:text="New Sales Order"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/bt_back_order"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_arrow" />
 
-        <TextView
-            android:id="@+id/tv_save_order"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="Save"
-            android:layout_marginEnd="20dp"
-            android:textSize="18dp"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_title_order"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="New Sales Order"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-</android.support.v7.widget.Toolbar>
+
+
+
+
+    </android.support.v7.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -96,6 +77,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="left"
+                    android:backgroundTint="@color/colorPrimaryDark"
                     android:layout_marginTop="10dp"
                     android:hint="Select Customer"
                     android:textAllCaps="false" />
@@ -128,6 +110,7 @@
                 android:id="@+id/et_sales_order"
                 android:textSize="15dp"
                 android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:gravity="left"
                 android:hint="Will be auto genarated"/>
 
@@ -147,6 +130,7 @@
                 android:id="@+id/et_sales_reference"
                 android:textSize="15dp"
                 android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:gravity="left"
                 android:hint="Sales Reference"/>
 
@@ -165,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/et_delevery_method"
                 android:textSize="15dp"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:layout_marginTop="10dp"
                 android:gravity="left"
                 android:hint="Delivery Method"/>
@@ -203,8 +188,12 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/et_date"
                     android:textSize="15dp"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:backgroundTint="@color/colorPrimaryDark"
                     android:layout_marginTop="10dp"
                     android:gravity="left"
+                   android:focusableInTouchMode="false"
                     android:hint="Date"/>
 
             </LinearLayout>
@@ -229,6 +218,10 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/et_shipment_date"
                     android:textSize="15dp"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:backgroundTint="@color/colorPrimaryDark"
                     android:layout_marginTop="10dp"
                     android:gravity="left"
                     android:hint="Shipment Date"/>
@@ -336,6 +329,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/et_customer_notes"
                 android:textSize="15dp"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:layout_marginTop="10dp"
                 android:gravity="left"
                 android:hint="Customer Notes"/>
@@ -354,6 +348,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/et_terms_condition"
                 android:textSize="15dp"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:layout_marginTop="10dp"
                 android:gravity="left"
                 android:hint="Terms and Conditions"/>
@@ -366,5 +361,23 @@
     </RelativeLayout>
 
     </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_save_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+
+
+
 
 </RelativeLayout>

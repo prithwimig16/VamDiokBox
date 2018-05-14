@@ -5,22 +5,41 @@
 
     <!--<item-->
         <!--android:id="@+id/action_drop_down"-->
-        <!--android:icon="@drawable/ic_arrow_drop_down_white_36dp"-->
         <!--android:orderInCategory="101"-->
         <!--android:title="@string/dropdown"-->
         <!--android:visible="true"-->
-        <!--android:actionViewClass=""-->
         <!--app:showAsAction="always" />-->
 
 
-    <!--<item-->
-        <!--android:id="@+id/spinner"-->
-        <!--android:icon="@drawable/ic_arrow_drop_down_white_36dp"-->
-        <!--app:showAsAction="always"-->
-        <!--app:actionViewClass="android.widget.Spinner"-->
-        <!--android:title="@string/dropdown" />-->
-
-
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Filter"
+        android:icon="@drawable/ic_arrow_drop_down_white_36dp"
+        app:showAsAction="always">
+        <menu >
+            <item
+                android:id="@+id/all_contact"
+                android:title="All Contact"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/customers"
+                android:title="Customers"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/vendor"
+                android:title="Vendors"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/active_contacts"
+                android:title="Active Contacts"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/inactive_contacts"
+                android:title="Inactive Contacts"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
 
 
     <item

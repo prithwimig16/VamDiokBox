@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavMenuAdapter.Me
     public void onResume() {
         super.onResume();
 
-        ((AppCompatActivity) this).getSupportActionBar().setTitle("Your Company");
+//        ((AppCompatActivity) this).getSupportActionBar().setTitle("Your Company");
     }
 
     @Override

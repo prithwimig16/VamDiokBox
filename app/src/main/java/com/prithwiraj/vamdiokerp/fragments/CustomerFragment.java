@@ -2,6 +2,7 @@ package com.prithwiraj.vamdiokerp.fragments;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +11,7 @@ import android.support.v4.app.ListFragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,6 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
@@ -34,6 +37,7 @@ import com.prithwiraj.vamdiokerp.activities.CreateCustomerActivity;
 import com.prithwiraj.vamdiokerp.model.Customer;
 import com.prithwiraj.vamdiokerp.utils.Utils;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 /**
@@ -68,17 +72,18 @@ public class CustomerFragment extends ListFragment implements View.OnClickListen
         super.onResume();
 
         //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Customers");
-        actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayUseLogoEnabled(true);
-        actionBar.setLogo(R.drawable.ic_arrow_drop_down_white_36dp);
+//        actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+//        actionBar.setDisplayShowHomeEnabled(true);
+//        actionBar.setDisplayUseLogoEnabled(true);
+//        actionBar.setLogo(R.drawable.ic_arrow_drop_down_white_36dp);
+//        actionBar.setTitle("Customers");
 
-
-        actionBar.setTitle("Customers");
-
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Customers");
 
 
     }
+
+
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -92,7 +97,25 @@ public class CustomerFragment extends ListFragment implements View.OnClickListen
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.all_contact:
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("All Contacts");
+                break;
+            case R.id.customers :
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Customers");
+                break;
+            case R.id.vendor :
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Vendors");
+                break;
+            case R.id.active_contacts:
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Active Contacts");
+                break;
+
+            case R.id.inactive_contacts:
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Inactive Contacts");
+                break;
+        }
+        return true;
     }
 
 
@@ -168,6 +191,8 @@ public class CustomerFragment extends ListFragment implements View.OnClickListen
 //        databaseReference = FirebaseDatabase.getInstance().getReference();
 //        databaseReference = databaseReference.child("users").child(id).child("customers");
         this.emptytextview=(TextView)v.findViewById(R.id.EmptytextView_cs);
+
+
 
     }
 
