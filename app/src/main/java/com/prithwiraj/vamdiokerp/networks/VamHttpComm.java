@@ -3,7 +3,6 @@ package com.prithwiraj.vamdiokerp.networks;
 import android.content.Context;
 import android.util.Base64;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -28,6 +27,7 @@ public class VamHttpComm {
     public static final int LOGOUT_SERVICE = 1003;
     public static final int SIGNUP_SERVICE = 1004;
     public static final int GET_USER_SERVICE = 1005;
+    public static final int ADD_CUSTOMER = 1006;
 
     public static final String GENERIC_ERROR_MESSAGE = "There was some problem in connecting to our server, " +
             "please try again!\nIf problem persist please " +
@@ -82,17 +82,21 @@ public class VamHttpComm {
                     this.values.put(access[0], access[1]);
                 }
             }
-//            if(VamCurrentUser.getSharedInstance().getUserID().length()>0&&VamCurrentUser.getSharedInstance().getAccessToken().length()>0)
-//            {
-//
-//
-//                this.values.put("user_id",VamCurrentUser.getSharedInstance().getUserID());
-//                this.values.put("access_token",VamCurrentUser.getSharedInstance().getAccessToken());
-//            }
-//            else{
-//                int i=0;
-//            }
+            if (ErpCurrentUser.getSharedInstance().getUser_id().length() > 0 && ErpCurrentUser.getSharedInstance().getAccessToken().length() > 0) {
 
+
+                this.values.put("i_user_id", ErpCurrentUser.getSharedInstance().getUser_id());
+                this.values.put("v_device_token", ErpCurrentUser.getSharedInstance().getAccessToken());
+            } else {
+
+            }
+
+            this.values.put("v_device_token", Config.getSharedInstance().TRANSACTION_ACCESS_KEY);
+            String deviceType = "Android";//androidp
+            if (Utils.isTablet(context)) {
+                deviceType = "Android";//androidt
+            }
+            this.values.put("e_device_type", deviceType);
         }
         catch (JSONException e) {
             Utils.consoleLog(getClass(),e.getLocalizedMessage());
@@ -187,7 +191,7 @@ public class VamHttpComm {
             }
         }) {
             @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
+            public Map<String, String> getHeaders() {
                 Map<String, String> headers = new HashMap<>();
                 if(tag!=STARTUP_SERVICE) {
 
@@ -356,25 +360,6 @@ public class VamHttpComm {
             }
             this.values.put("e_device_type",deviceType);
             this.values.put("i_country_id","8");
-
-
-//            this.values.put("v_device_param_odid",Utils.getODID());
-//
-//
-//
-//
-//            this.values.put("v_device_param_country_code",Utils.getCountryCode());
-//            this.values.put("v_device_param_country_name",Utils.getCountryName());
-//            //this.values.put("current_locale",Utils.getCurrentLocale());
-//            this.values.put("v_device_param_system_locale",Utils.getSystemLocale());
-//            this.values.put("v_device_param_idfa",Utils.getIDFA());
-//
-//            this.values.put("v_device_param_device_model",Utils.deviceModel());
-//            this.values.put("v_device_param_properties",Utils.deviceName());
-//            this.values.put("v_device_param_os_name",Utils.systemName());
-//            this.values.put("v_device_param_os_version",Utils.systemVersion());
-//            this.values.put("v_device_param_os_other_info",Utils.getMachineName());
-//            this.values.put("v_device_param_device_localized_model",Utils.localizedModel());
             this.processConnection();
         }
         catch (JSONException e) {
@@ -384,5 +369,36 @@ public class VamHttpComm {
                 callback = null;
             }
         }
+    }
+
+    public void callAddCustomer(String firstName, String lastName, String email,
+                                String cName, String dispalyName, String phone,
+                                String currency, String payment_terms,
+                                String billing_address, String shipping_String, String remarks) {
+
+        this.tag = ADD_CUSTOMER;
+        this.finalUrl = Config.getSharedInstance().STARTUP_API + "/customer";
+        try {
+            this.values.put("v_first_name", firstName);
+            this.values.put("v_last_name", lastName);
+            this.values.put("v_display_name", dispalyName);
+            this.values.put("v_email_id", email);
+            this.values.put("v_app_version", "v" + Utils.getAppVersion());
+            this.values.put("v_company_name", cName);
+            this.values.put("v_currency", currency);
+            this.values.put("e_user_role_type", "");
+            this.values.put("i_country_id", "");
+            this.values.put("v_mobile_number", phone);
+            this.values.put("t_cust_payment_terms", payment_terms);
+            this.values.put("t_cust_billing_address", billing_address);
+            this.values.put("t_cust_shipping_address", shipping_String);
+            this.values.put("t_cust_remarks", remarks);
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

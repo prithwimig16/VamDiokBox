@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.prithwiraj.vamdiokerp.R;
-import com.prithwiraj.vamdiokerp.model.ErpCurrentUser;
+import com.prithwiraj.vamdiokerp.utils.Utils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,7 +33,10 @@ public class HomeFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(ErpCurrentUser.getSharedInstance().getCompany());
+        //do it afetr implemnting get user
+
+//        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(ErpCurrentUser.getSharedInstance().getCompany());
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(Utils.getValueFromPref("v_full_name"));
     }
 
 
@@ -48,10 +51,11 @@ public class HomeFragment extends Fragment {
     }
 
     private void init(View v){
-        this.tvWelcome=(TextView)v.findViewById(R.id.tvWelcome);
+        this.tvWelcome = v.findViewById(R.id.tvWelcome);
     }
     private void updateUi(){
-        this.tvWelcome.setText("Welcome "+ ErpCurrentUser.getSharedInstance().getFirstName()+" !"); //+ ErpCurrentUser.getSharedInstance().name+" !"
+        // this.tvWelcome.setText("Welcome "+ ErpCurrentUser.getSharedInstance().getFirstName()+" !");//+ ErpCurrentUser.getSharedInstance().name+" !"
+        this.tvWelcome.setText("Welcome " + Utils.getValueFromPref("v_full_name"));
     }
 
 }

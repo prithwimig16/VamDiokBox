@@ -3,9 +3,9 @@ package com.prithwiraj.vamdiokerp.activities;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.android.volley.toolbox.Volley;
 import com.prithwiraj.vamdiokerp.R;
@@ -30,7 +30,16 @@ public class StartUpActivity extends AppCompatActivity implements VamHttpCommCal
     @Override
     protected void onResume() {
         super.onResume();
-        VamHttpComm.getNewInstance(this).callStartupService();
+        // VamHttpComm.getNewInstance(this).callStartupService();
+        //Utils.getInstance().displayLoading(this);
+        String v = Utils.getValueFromPref("access_token");
+        if (Utils.getValueFromPref("access_token") != null && Utils.getValueFromPref("access_token").length() > 0) {
+//            VamHttpComm.getNewInstance(this).callGetUserDataService();
+            loadDashboardScreen(); //for test wil change it later
+
+        } else {
+            this.loadLoginScreen();
+        }
     }
 
     private void nextStep()
@@ -38,16 +47,17 @@ public class StartUpActivity extends AppCompatActivity implements VamHttpCommCal
         Utils.getInstance().displayLoading(this);
         if(ErpCurrentUser.getSharedInstance().getAccessToken().length()>0 )
         {
-            VamHttpComm.getNewInstance(this).callGetUserDataService();
+//            VamHttpComm.getNewInstance(this).callGetUserDataService();
+            this.loadLoginScreen(); //for test wil change it later
 
         }
         else
         {
-            this.loadLoginScren();
+            this.loadLoginScreen();
         }
     }
 
-    private void loadLoginScren()
+    private void loadLoginScreen()
     {
 
 
@@ -78,7 +88,7 @@ public class StartUpActivity extends AppCompatActivity implements VamHttpCommCal
             {
                 final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
                 alertDialog.setCanceledOnTouchOutside(false);
-                alertDialog.setTitle("TableSpace Maintenance");
+                alertDialog.setTitle("VamDiok Box Maintenance");
                 alertDialog.setMessage(Config.getSharedInstance().MAINTENANCE_MESSAGE);
 
 
@@ -87,7 +97,7 @@ public class StartUpActivity extends AppCompatActivity implements VamHttpCommCal
             else if(Config.getSharedInstance().forceUpdate)
             {
                 final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-                alertDialog.setTitle("TableSpace Update");
+                alertDialog.setTitle("VamDiok Box Update");
                 alertDialog.setMessage(Config.getSharedInstance().UPDATE_MESSAGE);
                 alertDialog.setCanceledOnTouchOutside(false);
                 alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Update", new DialogInterface.OnClickListener() {
@@ -105,7 +115,7 @@ public class StartUpActivity extends AppCompatActivity implements VamHttpCommCal
             else if(Config.getSharedInstance().suggestUpdate)
             {
                 final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-                alertDialog.setTitle("TableSpace Update");
+                alertDialog.setTitle("VamDiok Box Update");
                 alertDialog.setCanceledOnTouchOutside(false);
                 alertDialog.setMessage(Config.getSharedInstance().UPDATE_MESSAGE);
                 alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
@@ -148,7 +158,7 @@ public class StartUpActivity extends AppCompatActivity implements VamHttpCommCal
             else
             {
 
-                this.loadLoginScren();
+                this.loadLoginScreen();
 
             }
         }
@@ -175,7 +185,7 @@ public class StartUpActivity extends AppCompatActivity implements VamHttpCommCal
         }
 
 
-        loadLoginScren();
+        loadLoginScreen();
 
     }
 }

@@ -2,10 +2,8 @@ package com.prithwiraj.vamdiokerp.model;
 
 import android.content.Context;
 
-
 import com.prithwiraj.vamdiokerp.utils.Utils;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
@@ -26,11 +24,12 @@ public class ErpCurrentUser extends VamUser {
 
         this.firstName="";
         this.accessToken="";
-//        this.email="";
+
         this.company="";
 
-        Utils.saveValueInPref("api_token","");
+        Utils.saveValueInPref("access_token", "");
         Utils.saveValueInPref("v_full_name","");
+        Utils.saveValueInPref("id", "");
     }
 
     public static ErpCurrentUser getSharedInstance()
@@ -66,9 +65,10 @@ public class ErpCurrentUser extends VamUser {
                 if(tempAccessToken!=null&&!tempAccessToken.isEmpty())
                 {
                     this.accessToken = tempAccessToken;
+                    Utils.saveValueInPref("access_token", accessToken);
                     Utils.saveValueInPref("v_full_name", this.firstName);
                     Utils.saveValueInPref("v_email_id", this.getEmail());
-                    //Utils.saveValueInPref("mobile",this.getContactNumber());
+                    Utils.saveValueInPref("id", this.getUser_id());
                     //Utils.saveValueInPref("userid", this.uId);
                    // Utils.saveValueInPref("country",this.country);
                     Utils.saveValueInPref("v_currency",this.currency);

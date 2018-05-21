@@ -16,15 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".activities.LoginSignUpActivity">
+
+        </activity>
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.SplashScreenActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        >
         <activity android:name=".activities.LoginActivity" />
         <activity
             android:name=".activities.MainActivity"
@@ -43,7 +46,9 @@
         <activity android:name=".activities.InviteAndManageActivity" />
         <activity
             android:name=".activities.InviteDetailsActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <activity
             android:name=".activities.SelectFieldActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>

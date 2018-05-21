@@ -3,8 +3,6 @@ package com.prithwiraj.vamdiokerp.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
-import com.prithwiraj.vamdiokerp.utils.Config;
 import com.prithwiraj.vamdiokerp.utils.Utils;
 
 import org.json.JSONObject;
@@ -28,7 +26,39 @@ public class VamUser implements Parcelable {
     }
 
     protected String firstName;
+
+    private String user_id;
+
+    protected VamUser(Parcel in) {
+        initialize();
+
+
+        this.firstName = in.readString();
+        this.user_id = in.readString();
+
+        this.company = in.readString();
+
+        this.contactNumber = in.readString();
+
+        this.email = in.readString();
+
+
+        this.userRole = in.readString();
+
+        this.country = in.readString();
+        this.state = in.readString();
+        this.location = in.readString();
+        this.countryId = in.readString();
+
+        this.currency = in.readString();
+
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
     protected String company;
+
 
 
 
@@ -99,8 +129,19 @@ public class VamUser implements Parcelable {
         initialize();
     }
 
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
+    }
+
+    public VamUser(JSONObject object) {
+
+        this.initialize(object);
+
+    }
+
     private void initialize() {
         this.firstName = "";
+        this.user_id = "";
         this.company = "";
         this.email = "";
         this.userRole = "";
@@ -113,16 +154,11 @@ public class VamUser implements Parcelable {
 
     }
 
-    public VamUser(JSONObject object) {
-
-        this.initialize(object);
-
-    }
-
     private void initialize(JSONObject object) {
         try {
 
             this.firstName = object.optString("v_full_name");
+            this.user_id = object.optString("id");
 
 //            if (this.avatar.length() > 0 && this.avatar.startsWith("http") == false) {
 //                this.avatar = "https://cre.clamhub.com" + this.avatar;
@@ -150,6 +186,7 @@ public class VamUser implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
 
         dest.writeString(this.firstName);
+        dest.writeString(this.user_id);
         dest.writeString(this.company);
         dest.writeString(this.contactNumber);
         dest.writeString(this.email);
@@ -162,31 +199,6 @@ public class VamUser implements Parcelable {
         dest.writeString(this.countryId);
 
         dest.writeString(this.currency);
-
-    }
-
-    protected VamUser(Parcel in) {
-        initialize();
-
-
-
-        this.firstName = in.readString();
-
-        this.company = in.readString();
-
-        this.contactNumber = in.readString();
-
-        this.email = in.readString();
-
-
-        this.userRole = in.readString();
-
-        this.country = in.readString();
-        this.state = in.readString();
-        this.location = in.readString();
-        this.countryId = in.readString();
-
-        this.currency = in.readString();
 
     }
 

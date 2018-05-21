@@ -19,6 +19,7 @@ import com.prithwiraj.vamdiokerp.navigationdrawer.NavMenuAdapter;
 import com.prithwiraj.vamdiokerp.navigationdrawer.SubTitle;
 import com.prithwiraj.vamdiokerp.navigationdrawer.TitleMenu;
 import com.prithwiraj.vamdiokerp.utils.Constant;
+import com.prithwiraj.vamdiokerp.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,17 +36,22 @@ public class MainActivity extends AppCompatActivity implements NavMenuAdapter.Me
 
         setToolbar();
 
-        drawer = (DrawerLayout) findViewById(R.id.main_layout);
+        drawer = findViewById(R.id.main_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
-        TextView tv=(TextView)findViewById(R.id.navigation_header_text);
-        TextView tvEmail=(TextView)findViewById(R.id.textView);
+        TextView tv = findViewById(R.id.navigation_header_text);
+        TextView tvEmail = findViewById(R.id.textView);
 
         //set Navigation drawer Title and Email..START
 
-        tv.setText(ErpCurrentUser.getSharedInstance().getFirstName());
-        tvEmail.setText(ErpCurrentUser.getSharedInstance().getEmail());
+//        tv.setText(ErpCurrentUser.getSharedInstance().getFirstName());
+//        tvEmail.setText(ErpCurrentUser.getSharedInstance().getEmail());
+//        String uid= ErpCurrentUser.getSharedInstance().getUser_id();
+
+        tv.setText(Utils.getValueFromPref("v_full_name"));
+        tvEmail.setText(Utils.getValueFromPref("v_email_id"));
+        String uid = ErpCurrentUser.getSharedInstance().getUser_id();
 
         //set Navigation drawer Title and Email..END
 
@@ -58,14 +64,14 @@ public class MainActivity extends AppCompatActivity implements NavMenuAdapter.Me
     }
 
     private void setToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
 
 
     private void setNavigationDrawerMenu() {
         NavMenuAdapter adapter = new NavMenuAdapter(this, getMenuList(), this);
-        RecyclerView navMenuDrawer = (RecyclerView) findViewById(R.id.main_nav_menu_recyclerview);
+        RecyclerView navMenuDrawer = findViewById(R.id.main_nav_menu_recyclerview);
         navMenuDrawer.setAdapter(adapter);
         navMenuDrawer.setLayoutManager(new LinearLayoutManager(this));
         navMenuDrawer.setAdapter(adapter);
@@ -128,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements NavMenuAdapter.Me
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_layout);
+        DrawerLayout drawer = findViewById(R.id.main_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
